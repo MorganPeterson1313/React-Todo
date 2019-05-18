@@ -8,31 +8,46 @@ import './Todo.css';
 
 
 
-    function TodoForm (props) {
-return( 
-    <form name = "TodoAddForm" onSubmit= {props.addTodoHandler}>
+
+    class TodoForm extends React.Component {
+        constructor(props){
+            super(props);
+            this.onChangeHandler=props.onChangeHandler
+            this.addTaskHandler=props.addTaskHandler
+            
+        }
+
+       
+
+render (){
+
+
+    return (
+
+      <div>
+    <form onSubmit= {this.addTaskHandler}>
 
     <input
     type= "text"
-    value= "props.task"
+    value= {this.task}
     placeholder = "task"
     name ="task"
-    onChange={props.changeHandler}
+    onChange={this.onChangeHandler}
+    
     />
-
-<input
-    type= "text"
-    value= "props.completed"
-    placeholder = "complete"
-    name ="complete"
-    onChange={props.changeHandler}
-    />
-<button onClick={props.addTodoHandler}>Add Todo item</button>
-    </form>
+    <div className="buttons">
+<button className="submit-btn" >Submit</button>
+<button className="clear-btn" onClick={this.props.clearCompleted}>
+        Clear Completed
+      </button>
+      </div>
+</form>
 
 
+</div>
+    );
 
-);
+}
         
 
 
