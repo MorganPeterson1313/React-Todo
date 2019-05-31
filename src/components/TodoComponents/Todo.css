@@ -1,0 +1,40 @@
+.clear-btn{
+
+    background-color:red;
+    border-radius: 5%;
+    color:whitesmoke;
+}
+
+.buttons{
+    display: flex;
+}
+
+.tasks.completed {
+    background-color: #d17d7c;
+    text-decoration: line-through;
+  }
+
+
+  .todo-list{
+
+
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0 auto;
+    
+  }
+  .submit-btn{
+      background-color: green;
+      color: white;
+  }
+  .app{
+      background: #d17d7c;
+      margin-left: 20%;
+      justify-content: center;
+      align-content: center;
+  }
+  .main-header{
+      margin-left: 30%;
+  }
